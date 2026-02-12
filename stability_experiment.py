@@ -22,7 +22,7 @@ from sklearn.metrics import cohen_kappa_score
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 MODEL = "gpt-4o"
-TEMPERATURE = 0.5
+TEMPERATURE = 0.3
 N_REPETITIONS = 10
 N_SAMPLES = 10
 SEED = 42
@@ -71,16 +71,11 @@ Partial – The main topic is addressed but lacks one or more specific details (
 Unacceptance – Information is present but is vague, contradictory, or disorganized enough to risk misinterpretation (e.g., "patient improved" with no objective markers).
 Missing – The aspect is entirely absent from the discharge summary.
 
-Instructions: For each aspect, first briefly identify the relevant excerpt(s) \
-from the discharge summary (or note "not found"), then assign your four labels \
-based on that evidence.
-
 Discharge Summary:
 {discharge_summary}
 
-Output Format: After your reasoning, provide a final answer block with each \
-aspect on its own line, the aspect letter followed by four labels separated \
-by commas. Example:
+Output Format: For each aspect, provide a line with the aspect letter followed \
+by four labels separated by commas. Example:
 A: Fully, Partial, Fully, Fully
 B: Partial, Fully, Fully, Partial
 C: Fully, Fully, Partial, Missing
@@ -113,16 +108,11 @@ Partial – The main topic is addressed but lacks one or more specific details (
 Unacceptance – Information is present but is vague, contradictory, or disorganized enough to risk misinterpretation (e.g., "patient improved" with no objective markers).
 Missing – The aspect is entirely absent from the discharge summary.
 
-Instructions: For each aspect, first briefly identify the relevant excerpt(s) \
-from the discharge summary (or note "not found"), then assign your four labels \
-based on that evidence.
-
 Discharge Summary:
 {discharge_summary}
 
-Output Format: After your reasoning, provide a final answer block with each \
-aspect on its own line, the aspect letter followed by four labels separated \
-by commas. Example:
+Output Format: For each aspect, provide a line with the aspect letter followed \
+by four labels separated by commas. Example:
 E: Fully, Partial, Fully, Fully
 D: Partial, Fully, Fully, Partial
 C: Fully, Fully, Partial, Missing
@@ -155,16 +145,11 @@ Partial – The main topic is addressed but lacks one or more specific details (
 Unacceptance – Information is present but is vague, contradictory, or disorganized enough to risk misinterpretation (e.g., "patient improved" with no objective markers).
 Missing – The aspect is entirely absent from the discharge summary.
 
-Instructions: For each aspect, first briefly identify the relevant excerpt(s) \
-from the discharge summary (or note "not found"), then assign your four labels \
-based on that evidence.
-
 Discharge Summary:
 {discharge_summary}
 
-Output Format: After your reasoning, provide a final answer block with each \
-aspect on its own line, the aspect name followed by four labels separated \
-by commas. Example:
+Output Format: For each aspect, provide a line with the aspect name followed \
+by four labels separated by commas. Example:
 Reason for Hospitalization: Fully, Partial, Fully, Fully
 Significant Findings: Partial, Fully, Fully, Partial
 Procedures and Treatment Provided: Fully, Fully, Partial, Missing
@@ -206,7 +191,7 @@ def call_llm(client: OpenAI, prompt: str, temperature: float = TEMPERATURE) -> s
                     {"role": "system", "content": SYSTEM_MSG},
                     {"role": "user", "content": prompt},
                 ],
-                max_tokens=2000,
+                max_tokens=300,
             )
             return response.choices[0].message.content.strip()
         except Exception as e:
