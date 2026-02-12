@@ -1,0 +1,112 @@
+======================================================================
+PROMPT STABILITY EXPERIMENT REPORT
+======================================================================
+Model: gpt-4o
+Temperature (Test 1&2): 0.5
+N Repetitions: 10
+N Samples: 10
+Random Seed: 42
+
+----------------------------------------------------------------------
+TEST 1: N-Repetition Reliability (Agreement Rate)
+----------------------------------------------------------------------
+Overall Mean Agreement Rate: 0.882
+
+Per-item mean agreement rates (averaged across samples):
+  A_Q1: 0.920
+  A_Q2: 0.800
+  A_Q3: 0.910
+  A_Q4: 0.910
+  B_Q1: 0.830
+  B_Q2: 0.950
+  B_Q3: 1.000
+  B_Q4: 0.930
+  C_Q1: 0.960
+  C_Q2: 0.750
+  C_Q3: 0.950
+  C_Q4: 0.890
+  D_Q1: 0.800
+  D_Q2: 0.920
+  D_Q3: 0.990
+  D_Q4: 0.850
+  E_Q1: 0.860
+  E_Q2: 0.670
+  E_Q3: 0.910
+  E_Q4: 0.830
+
+Per-sample agreement rates (averaged across items):
+  Sample 1 (DFF3FAD5B21A25): 0.810
+  Sample 2 (D95BF62190CAF1): 0.835
+  Sample 3 (D9CD1B92A693F0): 0.905
+  Sample 4 (DDDBFCFC70E1D7): 0.820
+  Sample 5 (D1A0D83A212B7B): 0.870
+  Sample 6 (DCB752AECB09DD): 0.945
+  Sample 7 (DD3F65585DCEE6): 0.915
+  Sample 8 (DEC31BDB808467): 0.925
+  Sample 9 (DF008CCB50935A): 0.945
+  Sample 10 (D4C1A9F23D5438): 0.845
+
+----------------------------------------------------------------------
+TEST 2: Ordinal Variance (Standard Deviation)
+----------------------------------------------------------------------
+Overall Mean SD: 0.2076
+  Interpretation: Moderate
+
+Per-item mean SD (averaged across samples):
+  A_Q1: 0.1558
+  A_Q2: 0.2938
+  A_Q3: 0.1590
+  A_Q4: 0.1548
+  B_Q1: 0.2528
+  B_Q2: 0.1300
+  B_Q3: 0.0000
+  B_Q4: 0.1458
+  C_Q1: 0.0490
+  C_Q2: 0.3555
+  C_Q3: 0.1100
+  C_Q4: 0.2390
+  D_Q1: 0.2786
+  D_Q2: 0.1400
+  D_Q3: 0.0300
+  D_Q4: 0.2417
+  E_Q1: 0.3333
+  E_Q2: 0.5160
+  E_Q3: 0.1866
+  E_Q4: 0.3797
+
+Per-sample mean SD (averaged across items):
+  Sample 1 (DFF3FAD5B21A25): 0.3051
+  Sample 2 (D95BF62190CAF1): 0.3397
+  Sample 3 (D9CD1B92A693F0): 0.1795
+  Sample 4 (DDDBFCFC70E1D7): 0.3038
+  Sample 5 (D1A0D83A212B7B): 0.2048
+  Sample 6 (DCB752AECB09DD): 0.0719
+  Sample 7 (DD3F65585DCEE6): 0.1553
+  Sample 8 (DEC31BDB808467): 0.0953
+  Sample 9 (DF008CCB50935A): 0.0795
+  Sample 10 (D4C1A9F23D5438): 0.3407
+
+----------------------------------------------------------------------
+TEST 3: Structural Perturbation (Cohen's Kappa)
+----------------------------------------------------------------------
+Cohen's Kappa (Original vs Reversed):      0.4564
+Cohen's Kappa (Original vs No-Lettering):  0.4565
+
+  Original vs Reversed:     POSITION BIAS DETECTED (threshold: kappa >= 0.8)
+  Original vs No-Lettering: FORMAT BIAS DETECTED (threshold: kappa >= 0.8)
+
+Per-sample label comparison (Original vs Reversed):
+  Sample 1 (DFF3FAD5B21A25): 17/20 match (85.0%)
+  Sample 2 (D95BF62190CAF1): 15/20 match (75.0%)
+  Sample 3 (D9CD1B92A693F0): 16/20 match (80.0%)
+  Sample 4 (DDDBFCFC70E1D7): 16/20 match (80.0%)
+  Sample 5 (D1A0D83A212B7B): 16/20 match (80.0%)
+  Sample 6 (DCB752AECB09DD): 17/20 match (85.0%)
+  Sample 7 (DD3F65585DCEE6): 15/20 match (75.0%)
+  Sample 8 (DEC31BDB808467): 17/20 match (85.0%)
+  Sample 9 (DF008CCB50935A): 16/20 match (80.0%)
+  Sample 10 (D4C1A9F23D5438): 17/20 match (85.0%)
+
+======================================================================
+END OF REPORT
+======================================================================

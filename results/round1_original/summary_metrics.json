@@ -1,0 +1,13 @@
+{
+  "model": "gpt-4o",
+  "temperature_test1_2": 0.5,
+  "n_repetitions": 10,
+  "n_samples": 10,
+  "test1_overall_agreement_rate": 0.882,
+  "test2_overall_mean_sd": 0.2076,
+  "test2_interpretation": "Moderate",
+  "test3_kappa_original_vs_reversed": 0.4564,
+  "test3_kappa_original_vs_no_lettering": 0.4565,
+  "test3_position_bias": true,
+  "test3_format_bias": true
+}

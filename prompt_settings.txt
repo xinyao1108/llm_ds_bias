@@ -1,0 +1,27 @@
+Role: You are the attending physician on record, auditing an ICU discharge summary to ensure complete documentation.
+Task: Assess the summary for five main aspects, with sub-items under each aspect. Assign one of the following labels to each sub-item: Fully, Partial, Unacceptance, or Missing. 
+
+Selected Aspect (Example): A. Reason for Hospitalization
+Definition: Chief complaint and/or history of present illness.
+Items to Evaluate:
+Q1. Sufficient information (enough information for its purpose; includes pertinent details)
+Q2. Concise (focused, brief, not redundant)
+Q3. Clear (understandable to providers and others)
+Q4. Organized (properly grouped, chronological, can find important information)
+
+Discharge Summary Excerpt: [Full DS text inserted here]
+
+Output Format: Provide four labels corresponding to items 1 through 4, separated by commas.
+
+Aspects:
+A Reason for Hospitalization: Refers to the chief complaint and/or the history of present illness.
+B Significant Findings: Refers to the primary diagnoses.
+C Procedures and Treatment Provided: Includes the hospital course and/or any hospital consults or procedures.
+D Patient’s Discharge Condition: Captures any documentation conveying the patient’s status at discharge.
+E Patient and Family Instructions: Includes instructions provided to the patient and/or family members, when appropriate.
+
+Labels:
+1 Fully: No missing info; details are granular.
+2 Partial: Primary info is there, but lacks specific context or secondary details.
+3 Unacceptance: Info is present but vague, incorrect, or disorganized.
+4 Missing: No mention of the item at all.

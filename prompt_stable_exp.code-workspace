@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../JBHI_Multi_LLM_Disagreement_as_a_Bias_Signal"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
