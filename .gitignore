@@ -1,2 +1,4 @@
 er_reason/er_reason.csv
 er_reason/patients_by_race.json
+er_reason/counterfactual_pairs.json
+er_reason/race_test/patients_by_race.json
