@@ -56,7 +56,7 @@ RACES = {
     "asian": "Asian",
     "black": "Black or African American",
 }
-SAMPLE_PER_RACE = 300   # balanced sample; set to None to use all records
+SAMPLE_PER_RACE = 500   # balanced sample; set to None to use all records
 RANDOM_SEED     = 42
 OUTPUT_FILE     = "counterfactual_pairs.json"
 
